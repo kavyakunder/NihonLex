@@ -1,4 +1,5 @@
 .App {
+  /* background-color: antiquewhite; */
   text-align: center;
 }
 
@@ -35,4 +36,176 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* 
+.fade {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; /* Adjust the duration and easing as needed */
+/* } */
+/* 
+.fade-out {
+  opacity: 0;
+} */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* 
+.fade-in {
+  animation: fade-in 2s ease-in-out;
+}
+
+.fade-out {
+  animation: fade-out 2s ease-in-out;
+} */
+/* 
+.content {
+  transition: opacity 0.5s ease-in-out;
+} */
+/* 
+.fade-in-on-hover:hover {
+  animation: fade-in 4s ease-in-out;
+}
+
+.fade-out-on-hover:hover {
+  animation: fade-out 4s ease-out;
+}
+
+.fade-out-on-hover {
+  animation: fade-out 4s ease-out;
+} */
+/* 
+.initial-fade-in {
+  animation: fade-in 2s ease-in-out;
+}
+
+.initial-fade-out {
+  animation: fade-out 2s ease-in-out;
+}
+
+.fade-in-on-hover:hover,
+.fade-out-on-hover:hover {
+  animation: fade-in 2s ease-in-out;
+}
+
+.fade-out-on-hover {
+  animation: fade-out 2s ease-in-out;
+} */
+/* .initial-fade-out {
+  animation: fade-out 2s ease-in-out;
+}
+
+.fade-in-on-hover {
+  animation: fade-in 2s ease-in-out;
+/* } */
+/* .initial-fade-in {
+  animation: fade-in 2s ease-in-out;
+}
+
+.initial-fade-out {
+  animation: fade-out 2s ease-in-out;
+}
+
+.fade-in-on-hover {
+  animation: fade-in 2s ease-in-out;
+}
+
+.fade-out-on-hover {
+  animation: fade-out 2s ease-in-out;
+} *
+ */
+/* 
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+/* 
+.initial-fade-in {
+  animation: fade-in 2s ease-in-out;
+}
+
+.initial-fade-out {
+  animation: fade-out 2s ease-in-out;
+}
+
+ */
+
+/* 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.scale-100 {
+  transform: scale(1);
+}
+
+.scale-95 {
+  transform: scale(0.95);
+}
+
+.translate-y-0 {
+  transform: translateY(0);
+}
+
+.-translate-y-2 {
+  transform: translateY(-0.5rem);
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+} */
+
+.fade-in-on-hover {
+  animation: fade-in 2s ease-in-out;
+}
+
+.fade-out-on-hover {
+  animation: fade-out 2s ease-in-out;
 }

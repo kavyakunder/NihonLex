@@ -1,0 +1,66 @@
+[
+  {
+    "japanese": "Otsukaresama",
+    "english": "Good job / Thank you for your hard work"
+  },
+  { "japanese": "Ganbatte", "english": "Do your best / Hang in there" },
+  {
+    "japanese": "Otsukaresama deshita",
+    "english": "Thank you for your hard work (at the end of the day)"
+  },
+  {
+    "japanese": "Yoroshiku onegaishimasu",
+    "english": "Please / I'm counting on you"
+  },
+  {
+    "japanese": "Otsukaresama deshita",
+    "english": "Thank you for your hard work (used in a professional setting)"
+  },
+  {
+    "japanese": "Shitsurei shimashita",
+    "english": "Excuse me / I'm sorry for the intrusion"
+  },
+  {
+    "japanese": "Korekara yoroshiku",
+    "english": "Nice to meet you / I look forward to working with you"
+  },
+  {
+    "japanese": "Gochisousama deshita",
+    "english": "Thanks for the meal / Thank you for the treat (after eating)"
+  },
+  { "japanese": "Otsukare", "english": "You look tired / Are you okay?" },
+  { "japanese": "Wakatta", "english": "I understand" },
+  { "japanese": "Ki o tsukete", "english": "Take care / Be careful" },
+  { "japanese": "Otsukaresama", "english": "Good job / Well done" },
+  {
+    "japanese": "Tanoshinde kite ne",
+    "english": "Have fun (said to someone going out)"
+  },
+  { "japanese": "Arigatou", "english": "Thank you" },
+  { "japanese": "Arigatou gozaimasu", "english": "Thank you very much" },
+  { "japanese": "Douitashimashite", "english": "You're welcome" },
+  { "japanese": "Daijoubu", "english": "It's okay / I'm fine" },
+  { "japanese": "Kawaii", "english": "Cute" },
+  { "japanese": "Kakkoii", "english": "Cool / Handsome" },
+  { "japanese": "Sugoi", "english": "Amazing / Awesome" },
+  { "japanese": "Wakaru", "english": "I understand" },
+  { "japanese": "Dame", "english": "No / Not allowed" },
+  { "japanese": "Yamete", "english": "Stop it" },
+  { "japanese": "Daisuki", "english": "I love you / I really like it" },
+  { "japanese": "Kirai", "english": "I hate it" },
+  { "japanese": "Iie", "english": "No" },
+  { "japanese": "Sugoku ureshii", "english": "I'm very happy" },
+  { "japanese": "Doushite", "english": "Why?" },
+  { "japanese": "Daijoubu desu ka", "english": "Are you okay?" },
+  { "japanese": "Kawairashii", "english": "Lovely / Adorable" },
+  { "japanese": "Kakkoii", "english": "Awesome / Cool" },
+  { "japanese": "Ja ne", "english": "See you (casual)" },
+  { "japanese": "Jaa ne", "english": "See you (friendly)" },
+  { "japanese": "Arigatou ne", "english": "Thanks, huh?" },
+  {
+    "japanese": "Otsukaresama deshita ne",
+    "english": "You worked hard, didn't you?"
+  },
+  { "japanese": "Wakaru ka", "english": "Do you understand?" },
+  { "japanese": "Kore nande", "english": "Why is this?" }
+]
