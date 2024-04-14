@@ -3,12 +3,13 @@ import {
   TextRevealCardTitle,
   TextRevealCardDescription,
 } from "./component/ui/text-reveal-card";
-export function TextRevealCardPreview({ mouseEnter }) {
+export function TextRevealCardPreview({ mouseEnter, text, revealText }) {
+  console.log("mouseneter", mouseEnter);
   return (
     <div className="flex items-center justify-center rounded-2xl w-full">
       <TextRevealCard
-        text={mouseEnter && "You know the business"}
-        revealText={mouseEnter && "I know the chemistry"}
+        text={text}
+        revealText={revealText}
         mouseEnter={mouseEnter}
         // text="You know the business"
         // revealText="I know the chemistry "
