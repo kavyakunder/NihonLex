@@ -7,7 +7,6 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 import { useEffect, useState } from "react";
-import { CiVolumeHigh } from "react-icons/ci";
 import phrases from "./data/phrases.json";
 import words from "./data/words.json";
 import hiragana from "./data/hiragana.json";
@@ -21,22 +20,19 @@ function App() {
 
   // const UNSPLASH_API = "https://api.unsplash.com/photos/random";
 
-  console.log("dataa2", phrases);
+  // console.log("dataa2", phrases);
   const [data, setData] = useState({ japanese: "", english: "" });
   const [randm, setRandm] = useState(null);
   const [imageUrlId, setImageUrlId] = useState("");
   const [timeNow, setTimeNow] = useState("");
   const [day, setDay] = useState("");
-  const [mouseEnter, setMouseEnter] = useState(false);
+  // const [mouseEnter, setMouseEnter] = useState(false);
   const [fade, setFade] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [dropDownValue, setDropdownValue] = useState("phrases");
   const [dropdownSelect, setDropdownSelect] = useState(phrases);
-  // const [mouseLeave, setMouseLeave] = useState(false);
-  // const [num, setNum] = useState(0);
 
   const getDropDownSelectValue = (value) => {
-    console.log("get value", value);
     setDropdownValue(value);
     if (value === "phrases") {
       setDropdownSelect(phrases);
@@ -47,11 +43,10 @@ function App() {
     } else if (value === "katakana") {
       setDropdownSelect(katakana);
     }
+    // setDropdownSelect(value);
+    localStorage.setItem("typeOfLearning", JSON.stringify(value));
     setRandm(getRandomNum());
-
-    // setDropdownSelect()
   };
-  console.log("dropDownValue", dropDownValue);
   const fetchData = async (abc) => {
     try {
       const response = await fetch(LEARN_JAPANESE_API);
@@ -63,24 +58,62 @@ function App() {
     }
   };
 
-  const fetchBackgroundImage = async () => {
-    const newUrl = new URLSearchParams({
-      client_id: UNSPLASH_CLIENT_ACCESS_KEY,
-      orientation: "landscape",
-      query: "nature",
-    });
+  let cachedImageUrl = null; // Initialize with null
 
-    const finalUrl = UNSPLASH_API + `?${newUrl.toString()}`;
-    try {
-      const response = await fetch(finalUrl);
-      const data = await response.json();
-      console.log("data reveived is check", data?.urls?.full);
-      // return data;
-      setImageUrlId(data?.urls?.full);
-    } catch (err) {
-      console.error("error is this", err);
-    }
-  };
+  // const fetchBackgroundImage = async () => {
+  //   const newUrl = new URLSearchParams({
+  //     client_id: UNSPLASH_CLIENT_ACCESS_KEY,
+  //     orientation: "landscape",
+  //     query: "nature",
+  //   });
+  //   const finalUrl = UNSPLASH_API + `?${newUrl.toString()}`;
+
+  //   try {
+  //     const response = await fetch(finalUrl);
+  //     const data = await response.json();
+
+  //     if (data?.urls?.full) {
+  //       const newImageUrl = data.urls.full;
+  //       const newImage = new Image();
+  //       newImage.src = newImageUrl;
+
+  //       newImage.onload = () => {
+  //         cachedImageUrl = newImageUrl; // Cache the new image URL
+  //         setImageUrlId(newImageUrl);
+  //         console.log("New image loaded:", newImageUrl);
+  //       };
+
+  //       newImage.onerror = () => {
+  //         console.error("Error loading new image.");
+  //         setImageUrlId(cachedImageUrl); // Use the cached image URL
+  //       };
+  //     } else {
+  //       console.log("No new image fetched. Using cached image.");
+  //       setImageUrlId(cachedImageUrl); // Use the cached image URL
+  //     }
+  //   } catch (err) {
+  //     console.error("Error fetching image:", err);
+  //     setImageUrlId(cachedImageUrl); // Use the cached image URL in case of error
+  //   }
+  // };
+  // const fetchBackgroundImage = async () => {
+  //   const newUrl = new URLSearchParams({
+  //     client_id: UNSPLASH_CLIENT_ACCESS_KEY,
+  //     orientation: "landscape",
+  //     query: "nature",
+  //   });
+
+  //   const finalUrl = UNSPLASH_API + `?${newUrl.toString()}`;
+  //   try {
+  //     const response = await fetch(finalUrl);
+  //     const data = await response.json();
+  //     console.log("data reveived is check", data?.urls?.full);
+  //     // return data;
+  //     setImageUrlId(data?.urls?.full);
+  //   } catch (err) {
+  //     console.error("error is this", err);
+  //   }
+  // };
 
   const getRandomNum = () => {
     const theRandomNum = Math.floor(Math.random() * 20);
@@ -100,66 +133,42 @@ function App() {
         timeStyle: "short",
       });
       setTimeNow(getTimeNow);
-    }, 0); // Update time every second
+    }, 0);
 
     const now = new Date();
-    setDay(date.format(now, "ddd, MMM DD YYYY")); // => 'Fri, Jan 02 2015'
+    setDay(date.format(now, "ddd, MMM DD YYYY"));
 
-    return () => clearInterval(interval); // Clean up the interval on unmount
+    return () => clearInterval(interval);
   }, []);
 
-  console.log("time", timeNow, day);
   const refreshFunction = () => {
     const abcNew = getRandomNum();
-    console.log("hello inside useeffect!", abcNew);
-    // const buttonNew = () => {
-    // console.log("randomnum", getRandomNum());
-    // };
-    // fetchData(abcNew);
+
     setRandm(abcNew);
     // fetchBackgroundImage();
   };
   const listenPronounciation = () => {
-    console.log("hey");
     let utterance = new SpeechSynthesisUtterance(
       dropdownSelect[randm]?.hiragana
     );
     utterance.lang = "ja-JP";
 
     speechSynthesis.speak(utterance);
-    // 'ja-JP' represents the Japanese language and Japanese voice
-  };
-
-  const mouseEnterFunction = () => {
-    setMouseEnter(true);
-    // setFade(true);
-  };
-
-  const mouseLeaveFunction = () => {
-    setMouseEnter(false);
-    // setFade(true);
-  };
-
-  const handleTransitionEnd = () => {
-    if (fade) {
-      setFade(false);
-    }
   };
 
   const getModalOpen = () => {
     setModalOpen(!modalOpen);
   };
-  console.log("dataaa", dropdownSelect);
   return (
     // <div>
     <div
-      className="App relative bg-cover bg-center bg-no-repeat z-0 shadow-inner  "
+      className="App relative bg-cover bg-center bg-no-repeat z-0 shadow-inner  shadow-white "
       // style={{
       //   backgroundImage: `url(${imageUrlId})`,
       // }}
     >
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-[0.4]"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-[0.20] shadow-inner  shadow-white z-50 "
         style={{
           // backgroundImage: `url(${imageUrlId})`,
           backgroundImage:
@@ -240,24 +249,21 @@ function App() {
         </div>
       )}
       <div className="backdrop-filter flex justify-center items-center h-screen ">
-        <div className="flex justify-center align-middle z-50 text-white font-bold -mt-24">
+        <div className="flex justify-center align-middle z-50 text-gray-300  -mt-24">
           <div>
             <div
-              onMouseEnter={mouseEnterFunction}
-              onMouseLeave={mouseLeaveFunction}
               onClick={listenPronounciation}
-              className=" flex justify-center items-baseline flex-nowrap "
+              className=" flex justify-center items-baseline flex-nowrap font-bold"
             >
               <TextRevealCardPreview
-                mouseEnter={mouseEnter}
                 text={dropdownSelect[randm]?.japanese}
                 revealText={dropdownSelect[randm]?.hiragana}
               />
-              <span className="cursor-pointer text-3xl">
+              <span className="cursor-pointer text-3xl ml-2">
                 <FontAwesomeIcon icon={faVolumeHigh} />
               </span>
             </div>
-            <p className="text-2xl mt-8">{dropdownSelect[randm]?.english}</p>
+            <p className="text-4xl mt-8">{dropdownSelect[randm]?.english}</p>
           </div>
         </div>
       </div>
