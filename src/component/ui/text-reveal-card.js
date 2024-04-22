@@ -4,24 +4,16 @@ import { motion } from "framer-motion";
 
 export const TextRevealCard = ({ text, revealText }) => {
   const [isMouseOver, setIsMouseOver] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
 
   function mouseLeaveHandler() {
     setIsMouseOver(false);
   }
   function mouseEnterHandler() {
     setIsMouseOver(true);
-    setHasInteracted(true);
   }
-  console.log("isssssmouseover", isMouseOver);
 
   return (
-    <div
-      onMouseEnter={mouseEnterHandler}
-      onMouseLeave={mouseLeaveHandler}
-      // onTouchStart={mouseEnterHandler}
-      // onTouchEnd={mouseLeaveHandler}
-    >
+    <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
       <div className="relative flex items-center overflow-hidden">
         <motion.div
           initial={false}
