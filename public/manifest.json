@@ -1,14 +1,17 @@
 {
   "manifest_version": 3,
   "version": "1.0",
-  "description": "NihonLex makes learning Japanese a breeze. Every new tab serves up Japanese words, Katakana, Hiragana, and catchy phrases effortlessly!",
+  "description": "NihonLex: Effortless Japanese learning with letters, words or phrases on every new tab.",
   "short_name": "NihonLex",
   "action": {
-    "default_title": "NEW REACT",
+    "default_title": "NihonLex",
     "default_popup": "index.html"
   },
   "name": "NihonLex Chrome extension",
-
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "tabs", "storage"],
   "chrome_url_overrides": {
     "newtab": "index.html"
   }

@@ -1,3 +1,5 @@
+/* global chrome */
+
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -31,6 +33,8 @@ function App() {
     { value: "katakana", label: "Letters (Katakana)", data: katakana },
   ];
 
+  let cachedImageUrl = null;
+  console.log("watching cahec", cachedImageUrl);
   useEffect(() => {
     const storedTypeOfLearning = localStorage.getItem("typeOfLearning");
 
@@ -45,7 +49,14 @@ function App() {
     } else {
       generateRandomNumber(phrases.length);
     }
-    fetchBackgroundImage();
+    // setImageUrlId(cachedImageUrl);
+    // fetchBackgroundImage();
+
+    chrome.runtime.sendMessage({ type: "GET_CACHED_IMAGE_URL" }, (response) => {
+      const { cachedImageUrl } = response;
+      setImageUrlId(cachedImageUrl);
+      fetchBackgroundImage();
+    });
   }, []);
 
   const getDropDownSelectValue = (value) => {
@@ -63,8 +74,10 @@ function App() {
     fetchBackgroundImage();
   };
 
-  let cachedImageUrl = null;
   const fetchBackgroundImage = async () => {
+    console.log("cacheddd", cachedImageUrl);
+    // setImageUrlId(cachedImageUrl);
+
     const newUrl = new URLSearchParams({
       client_id: process.env.REACT_APP_UNSPLASH_CLIENT_ACCESS_KEY,
       orientation: "landscape",
@@ -81,7 +94,12 @@ function App() {
         newImage.src = newImageUrl;
 
         newImage.onload = () => {
-          cachedImageUrl = newImageUrl;
+          // cachedImageUrl = newImageUrl;
+          // setImageUrlId(newImageUrl);
+          chrome.runtime.sendMessage({
+            type: "SET_CACHED_IMAGE_URL",
+            newImageUrl,
+          });
           setImageUrlId(newImageUrl);
           console.log("New image loaded:", newImageUrl);
         };
