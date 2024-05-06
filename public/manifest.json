@@ -1,17 +1,17 @@
 {
   "manifest_version": 3,
   "version": "1.0",
-  "description": "NihonLex: Effortless Japanese learning with letters, words or phrases on every new tab.",
+  "description": "Effortless Japanese learning with letters, words or phrases with every new tab.",
   "short_name": "NihonLex",
   "action": {
     "default_title": "NihonLex",
     "default_popup": "index.html"
   },
   "icons": {
-    "16": "nihonlex-favicon.png",
-    "32": "nihonlex-favicon.png",
-    "64": "nihonlex-favicon.png",
-    "128": "nihonlex-favicon.png"
+    "16": "icons/nihonlex-favicon.png",
+    "32": "icons/nihonlex-favicon.png",
+    "64": "icons/nihonlex-favicon.png",
+    "128": "icons/nihonlex-favicon.png"
   },
   "name": "NihonLex Chrome extension",
   "permissions": ["activeTab", "tabs", "storage"],

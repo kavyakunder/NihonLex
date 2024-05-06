@@ -149,7 +149,7 @@ function App() {
       ></div>
 
       <img
-        src="../nihonlexlogo.png"
+        src="./nihonlexlogo.png"
         alt="Nihonlex logo"
         className="absolute left-10 top-10 w-20 h-20 brightness-[0.3]"
       />
