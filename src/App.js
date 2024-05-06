@@ -1,5 +1,3 @@
-/* global chrome */
-
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -34,7 +32,7 @@ function App() {
   ];
 
   let cachedImageUrl = null;
-  console.log("watching cahec", cachedImageUrl);
+
   useEffect(() => {
     const storedTypeOfLearning = localStorage.getItem("typeOfLearning");
 
@@ -49,14 +47,8 @@ function App() {
     } else {
       generateRandomNumber(phrases.length);
     }
-    // setImageUrlId(cachedImageUrl);
-    // fetchBackgroundImage();
-
-    chrome.runtime.sendMessage({ type: "GET_CACHED_IMAGE_URL" }, (response) => {
-      const { cachedImageUrl } = response;
-      setImageUrlId(cachedImageUrl);
-      fetchBackgroundImage();
-    });
+    setImageUrlId(cachedImageUrl);
+    fetchBackgroundImage();
   }, []);
 
   const getDropDownSelectValue = (value) => {
@@ -75,9 +67,6 @@ function App() {
   };
 
   const fetchBackgroundImage = async () => {
-    console.log("cacheddd", cachedImageUrl);
-    // setImageUrlId(cachedImageUrl);
-
     const newUrl = new URLSearchParams({
       client_id: process.env.REACT_APP_UNSPLASH_CLIENT_ACCESS_KEY,
       orientation: "landscape",
@@ -85,43 +74,33 @@ function App() {
     });
     const finalUrl =
       process.env.REACT_APP_UNSPLASH_API + `?${newUrl.toString()}`;
+
     try {
       const response = await fetch(finalUrl);
       const data = await response.json();
+
       if (data?.urls?.full) {
         const newImageUrl = data.urls.full;
         const newImage = new Image();
         newImage.src = newImageUrl;
 
         newImage.onload = () => {
-          // cachedImageUrl = newImageUrl;
-          // setImageUrlId(newImageUrl);
-          chrome.runtime.sendMessage({
-            type: "SET_CACHED_IMAGE_URL",
-            newImageUrl,
-          });
+          cachedImageUrl = newImageUrl;
           setImageUrlId(newImageUrl);
-          console.log("New image loaded:", newImageUrl);
         };
 
         newImage.onerror = () => {
           console.error("Error loading new image.");
-          setImageUrlId(
-            "https://images.unsplash.com/photo-1515824955341-43172b4d8260?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          );
+          setImageUrlId(cachedImageUrl);
         };
       } else {
-        console.log("No new image fetched. Using cached image.");
         setImageUrlId(cachedImageUrl);
       }
     } catch (err) {
       console.error("Error fetching image:", err);
-      setImageUrlId(
-        "https://images.unsplash.com/photo-1515824955341-43172b4d8260?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      );
+      setImageUrlId(cachedImageUrl);
     }
   };
-
   const generateRandomNumber = (length) => {
     const getTheNumber = Math.floor(Math.random() * length);
     setRandomNumber(getTheNumber);
@@ -165,6 +144,7 @@ function App() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-[0.20]  "
         style={{
           backgroundImage: `url(${imageUrlId})`,
+          backgroundColor: imageUrlId ? "transparent" : "black",
         }}
       ></div>
 

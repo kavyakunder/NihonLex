@@ -21,7 +21,7 @@
   },
   {
     "japanese": "Otsukaresama deshita",
-    "english": "Thank you for your hard work (used in a professional setting)",
+    "english": "Thank you for your hard work ",
     "hiragana": "おつかれさまでした"
   },
   {
@@ -36,7 +36,7 @@
   },
   {
     "japanese": "Gochisousama deshita",
-    "english": "Thanks for the meal / Thank you for the treat (after eating)",
+    "english": "Thanks for the meal ",
     "hiragana": "ごちそうさまでした"
   },
   {
@@ -57,7 +57,7 @@
   },
   {
     "japanese": "Tanoshinde kite ne",
-    "english": "Have fun (said to someone going out)",
+    "english": "Have fun ",
     "hiragana": "たのしんできてね"
   },
   { "japanese": "Arigatou", "english": "Thank you", "hiragana": "ありがとう" },
@@ -161,11 +161,6 @@
   { "japanese": "Okaeri", "english": "Welcome back", "hiragana": "おかえり" },
 
   {
-    "japanese": "Watashi wa Nihongo ga wakarimasen",
-    "english": "I don't understand Japanese",
-    "hiragana": "わたしはにほんごがわかりません"
-  },
-  {
     "japanese": "Kore wa nan desu ka?",
     "english": "What is this?",
     "hiragana": "これはなんですか"
@@ -186,123 +181,93 @@
     "hiragana": "ちょっとまってください"
   },
   {
-    "japanese": "Kore wa doko de kau no desu ka?",
-    "english": "Where can I buy this?",
-    "hiragana": "これはどこでかうのですか"
+    "japanese": "Yosh!",
+    "english": "Alright!",
+    "hiragana": "よし！"
   },
   {
-    "japanese": "Issho ni ikimasen ka?",
-    "english": "Shall we go together?",
-    "hiragana": "いっしょにいきませんか"
+    "japanese": "Itai!",
+    "english": "It hurts!",
+    "hiragana": "いたい！"
   },
   {
-    "japanese": "Nihongo ga jouzu desu ne",
-    "english": "You're good at Japanese",
-    "hiragana": "にほんごがじょうずですね"
+    "japanese": "Tasukete!",
+    "english": "Help me!",
+    "hiragana": "たすけて！"
   },
   {
-    "japanese": "Kore wa totemo takai desu",
-    "english": "This is very expensive",
-    "hiragana": "これはとてもたかいです"
+    "japanese": "Urusai na!",
+    "english": "Be quiet!",
+    "hiragana": "うるさいな！"
   },
   {
-    "japanese": "Ashita wa tenki ga ii desu",
-    "english": "The weather will be nice tomorrow",
-    "hiragana": "あしたはてんきがいいです"
+    "japanese": "Kore wa dou?",
+    "english": "How about this?",
+    "hiragana": "これはどう？"
   },
   {
-    "japanese": "Mada wakarimasen",
-    "english": "I still don't understand",
-    "hiragana": "まだわかりません"
+    "japanese": "Hajimemashite",
+    "english": "Nice to meet you ",
+    "hiragana": "はじめまして"
   },
   {
-    "japanese": "Sore wa nan desu ka?",
-    "english": "What is that?",
-    "hiragana": "それはなんですか"
+    "japanese": "Maji?",
+    "english": "Seriously?",
+    "hiragana": "まじ？"
   },
   {
-    "japanese": "Kore wa dare no desu ka?",
-    "english": "Whose is this?",
-    "hiragana": "これはだれのですか"
+    "japanese": "Wakaranai",
+    "english": "I don't know",
+    "hiragana": "わからない"
   },
   {
-    "japanese": "Doko kara kimashita ka?",
-    "english": "Where did you come from?",
-    "hiragana": "どこからきましたか"
+    "japanese": "Honto?",
+    "english": "Really?",
+    "hiragana": "ほんと？"
   },
   {
-    "japanese": "Itsu kaeru no desu ka?",
-    "english": "When will you return?",
-    "hiragana": "いつかえるのですか"
+    "japanese": "Naruhodo",
+    "english": "I see / I understand",
+    "hiragana": "なるほど"
   },
   {
-    "japanese": "Kore wa nan no imi desu ka?",
-    "english": "What does this mean?",
-    "hiragana": "これはなんのいみですか"
+    "japanese": "Nani?",
+    "english": "What?",
+    "hiragana": "なに？"
   },
   {
-    "japanese": "Watashi mo ikitai desu",
-    "english": "I also want to go",
-    "hiragana": "わたしもいきたいです"
+    "japanese": "Chigau",
+    "english": "Wrong / Incorrect",
+    "hiragana": "ちがう"
   },
   {
-    "japanese": "Kore wa watashi no desu",
-    "english": "This is mine",
-    "hiragana": "これはわたしのです"
+    "japanese": "Demo...",
+    "english": "But...",
+    "hiragana": "でも..."
   },
   {
-    "japanese": "Anata no namae wa nan desu ka?",
-    "english": "What is your name?",
-    "hiragana": "あなたのなまえはなんですか"
+    "japanese": "Yare yare",
+    "english": "Good grief / Well, well",
+    "hiragana": "やれやれ"
   },
   {
-    "japanese": "Sore wa muzukashii desu ne",
-    "english": "That is difficult, isn't it?",
-    "hiragana": "それはむずかしいですね"
+    "japanese": "Saa, ikou!",
+    "english": "Come on, let's go!",
+    "hiragana": "さあ、いこう！"
   },
   {
-    "japanese": "Mada jikan ga arimasu",
-    "english": "There is still time",
-    "hiragana": "まだじかんがあります"
+    "japanese": "Watashi o shinjite",
+    "english": "Believe in me",
+    "hiragana": "わたしをしんじて"
   },
   {
-    "japanese": "Kore wa watashi no suki na mono desu",
-    "english": "This is my favorite thing",
-    "hiragana": "これはわたしのすきなものです"
+    "japanese": "Nande?",
+    "english": "Why?",
+    "hiragana": "なんで？"
   },
   {
-    "japanese": "Kore wa nani ni tsukaimasu ka?",
-    "english": "What is this used for?",
-    "hiragana": "これはなににつかいますか"
-  },
-  {
-    "japanese": "Watashi wa soko ni itta koto ga arimasu",
-    "english": "I have been there before",
-    "hiragana": "わたしはそこにいったことがあります"
-  },
-  {
-    "japanese": "Sore wa totemo kawaii desu ne",
-    "english": "That is very cute, isn't it?",
-    "hiragana": "それはとてもかわいいですね"
-  },
-  {
-    "japanese": "Doko ni sundeimasu ka?",
-    "english": "Where do you live?",
-    "hiragana": "どこにすんでいますか？"
-  },
-  {
-    "japanese": "Kore wa atarashii no desu ka?",
-    "english": "Is this new?",
-    "hiragana": "これはあたらしいのですか"
-  },
-  {
-    "japanese": "Sore wa furui no desu",
-    "english": "That is old",
-    "hiragana": "それはふるいのです"
-  },
-  {
-    "japanese": "Watashi wa soko ni iku tsumori desu",
-    "english": "I am planning to go there",
-    "hiragana": "わたしはそこにいくつもりです"
+    "japanese": "Yokatta",
+    "english": "I'm glad",
+    "hiragana": "よかった"
   }
 ]
