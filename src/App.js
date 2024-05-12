@@ -15,6 +15,8 @@ import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
 
+const FALLBACK_IMAGE_VALUE =
+  "https://images.unsplash.com/photo-1515824955341-43172b4d8260?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 function App() {
   const [randomNumber, setRandomNumber] = useState(null);
   const [imageUrlId, setImageUrlId] = useState("");
@@ -90,15 +92,13 @@ function App() {
         };
 
         newImage.onerror = () => {
-          console.error("Error loading new image.");
-          setImageUrlId(cachedImageUrl);
+          setImageUrlId(cachedImageUrl || FALLBACK_IMAGE_VALUE);
         };
       } else {
-        setImageUrlId(cachedImageUrl);
+        setImageUrlId(cachedImageUrl || FALLBACK_IMAGE_VALUE);
       }
     } catch (err) {
-      console.error("Error fetching image:", err);
-      setImageUrlId(cachedImageUrl);
+      setImageUrlId(cachedImageUrl || FALLBACK_IMAGE_VALUE);
     }
   };
   const generateRandomNumber = (length) => {

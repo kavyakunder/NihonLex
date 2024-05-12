@@ -8,13 +8,12 @@
     "default_popup": "index.html"
   },
   "icons": {
-    "16": "icons/nihonlex-favicon.png",
-    "32": "icons/nihonlex-favicon.png",
-    "64": "icons/nihonlex-favicon.png",
-    "128": "icons/nihonlex-favicon.png"
+    "16": "nihonlex-favicon.png",
+    "32": "nihonlex-favicon.png",
+    "64": "nihonlex-favicon.png",
+    "128": "nihonlex-favicon.png"
   },
-  "name": "NihonLex Chrome extension",
-  "permissions": ["activeTab", "tabs", "storage"],
+  "name": "NihonLex",
   "chrome_url_overrides": {
     "newtab": "index.html"
   }
