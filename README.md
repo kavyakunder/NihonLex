@@ -1,4 +1,5 @@
-# NihonLex - Chrome extension
+# [NihonLex - Chrome extension](https://chromewebstore.google.com/detail/nihonlex/kbechaabdneggimaokfnibgcckgdmaig)
+![chrome ext pic 2](https://github.com/kavyakunder/newrepo/assets/81958043/f9e5d596-7da9-438f-a6a1-89f7ad6e7a36)
 
 NihonLex is a Chrome extension that helps you learn Japanese phrases commonly used in anime by displaying them every time you open a new tab. It's a fun and convenient way to gradually improve your understanding of conversational Japanese used in anime series.
 
