@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# NihonLex - Chrome extension
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NihonLex is a Chrome extension that helps you learn Japanese phrases commonly used in anime by displaying them every time you open a new tab. It's a fun and convenient way to gradually improve your understanding of conversational Japanese used in anime series.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. **New Tab Vocabulary:** With each new tab opened, NihonLex displays a Japanese word, phrase, or character along with its pronunciation, definition, and an example sentence.
+2. **Four Study Modes:** Choose from four study modes - Words, Phrases, Letters (Hiragana/Katakana) - to focus on the areas you want to improve.
+3. **Audio Pronunciation:** Listen to the correct pronunciation of the displayed vocabulary with built-in audio playback.
+4. **Unsplash Integration:** Each new tab also shows a beautiful background image from Unsplash, making your learning experience more visually appealing.
+5. **Acernity UI Effect:** NihonLex incorporates a special effect from Acernity UI, adding an extra touch of elegance to the extension's user interface.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- Tailwind CSS
+- Unsplash API (for background images)
+- Acernity UI (for special effect)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository or download the source code.
+2. Navigate to `chrome://extensions` in your Chrome browser.
+3. Enable "Developer mode" by toggling the switch in the top-right corner.
+4. Click "Load unpacked" and select the root directory of the project.
+5. The NihonLex extension should now be installed and ready to use.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+1. Open a new tab in your Chrome browser.
+2. NihonLex will display a Japanese word, phrase, or character, along with its pronunciation and meaning.
+3. Refresh option can be used to learn new word.
+4. Click the speaker icon to hear the audio pronunciation.
+5. Use the dropdown menu to switch between different study modes (Words, Phrases, Letters, Kanji).
+6. Enjoy the beautiful background image from Unsplash while you learn.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Acknowledgments
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React
+- Tailwind CSS
+- [Unsplash API](https://unsplash.com/developers)
+- [Acernity UI](https://ui.aceternity.com/)
