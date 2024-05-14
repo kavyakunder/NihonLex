@@ -41,4 +41,4 @@ NihonLex is a Chrome extension that helps you learn Japanese phrases commonly us
 - React
 - Tailwind CSS
 - [Unsplash API](https://unsplash.com/developers)
-- [Acernity UI](https://ui.aceternity.com/)
+- [Aceternity UI](https://ui.aceternity.com/)
