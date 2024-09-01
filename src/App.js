@@ -126,9 +126,11 @@ function App() {
   };
 
   const listenPronounciation = () => {
-    let utterance = new SpeechSynthesisUtterance(
-      dropdownSelect[randomNumber]?.hiragana
-    );
+    let pronunciation =
+      dropdownSelect[randomNumber]?.hiragana ||
+      dropdownSelect[randomNumber]?.katakana;
+
+    let utterance = new SpeechSynthesisUtterance(pronunciation);
     utterance.lang = "ja-JP";
 
     speechSynthesis.speak(utterance);
