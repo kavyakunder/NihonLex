@@ -9,14 +9,14 @@ NihonLex is a Chrome extension that helps you learn Japanese phrases commonly us
 2. **Four Study Modes:** Choose from four study modes - Words, Phrases, Letters (Hiragana/Katakana) - to focus on the areas you want to improve.
 3. **Audio Pronunciation:** Listen to the correct pronunciation of the displayed vocabulary with built-in audio playback.
 4. **Unsplash Integration:** Each new tab also shows a beautiful background image from Unsplash, making your learning experience more visually appealing.
-5. **Acernity UI Effect:** NihonLex incorporates a special effect from Acernity UI, adding an extra touch of elegance to the extension's user interface.
+5. **Aceternity UI Effect:** NihonLex incorporates a special effect from Acernity UI, adding an extra touch of elegance to the extension's user interface.
 
 ## Technologies Used
 
 - React
 - Tailwind CSS
 - Unsplash API (for background images)
-- Acernity UI (for special effect)
+- Aceternity UI (for special effect)
 
 ## Installation
 
